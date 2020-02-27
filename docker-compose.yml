@@ -1,0 +1,23 @@
+version: "2"
+services:
+  mongo:
+    container_name: mongo
+    image: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - /data/db
+  app:
+    container_name: chatapp
+    image: mongoose5/chatapp:master
+    restart: "no"
+    build: .
+    ports:
+      - "7205:7205"
+      - "7443:7443"
+    links:
+      - mongo
+    environment:
+      - NODE_ENV=production
+    volumes:
+      - "./config:/chat-app/config"

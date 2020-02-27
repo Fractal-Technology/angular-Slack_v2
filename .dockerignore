@@ -1,0 +1,16 @@
+back-end/dist
+config/local.yml
+config/production.yml
+
+.nyc_output
+.vscode
+coverage
+node_modules
+logs
+.editorconfig
+.travis.yml
+karma.conf.js
+main.js
+protractor.conf.js
+proxy.conf.json
+README.md

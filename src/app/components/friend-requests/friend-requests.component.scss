@@ -1,0 +1,51 @@
+#header {
+  overflow: hidden;
+}
+
+.ui.segment {
+  background: none;
+}
+
+h3.ui.header {
+  margin-top: 8px;
+  margin-bottom: 10px;
+}
+
+table {
+  .ui.icon.button {
+    padding: 0.53em;
+  }
+  &:not(.inverted) {
+    border: 1px solid rgba(34, 36, 38, 0.26);
+    box-shadow: 2px 2px 7px #cacaca;
+  }
+  &.inverted {
+    box-shadow: 2px 2px 7px #2a2a2a;
+  }
+}
+
+.ui.primary.button {
+  margin-bottom: 20px;
+}
+
+th {
+  border-bottom: 1px solid #c9c9c9 !important;
+  text-transform: uppercase !important;
+  font-weight: normal !important;
+  font-size: 0.85em;
+}
+
+td,
+th {
+  border-top: none !important;
+  border-right: none !important;
+  border-left: none !important;
+}
+
+td.request-type {
+  font-size: 0.8em;
+}
+
+.center-aligned {
+  text-align: center !important;
+}

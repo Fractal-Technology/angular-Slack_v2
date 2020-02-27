@@ -1,0 +1,26 @@
+.header {
+  background: #fff !important;
+}
+
+.segment {
+  margin: 0;
+  border-radius: 0;
+}
+
+.errorMsg {
+  color: red;
+}
+
+#upload-field {
+  overflow: hidden;
+
+  .button {
+    color: white;
+    max-width: 250px;
+    padding-left: 25px;
+    padding-right: 25px;
+    float: left;
+    margin-right: 10px;
+    margin-left: 5px;
+  }
+}

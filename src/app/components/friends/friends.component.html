@@ -1,0 +1,47 @@
+<!-- LEFT MAIN SIDEBAR -->
+<div id="sidebar-container">
+  <div id="sidebar-menu" class="ui visible left vertical sidebar menu"
+    [class.inverted]="settingsService.invertedTheme">
+    <a class="item" [routerLink]="['/friends']">
+      <h5>Friend Requests</h5>
+      <i class="ui label" [class.blue]="incomingFriendRequests.length > 0">
+        {{ friendRequests.length }}
+      </i>
+    </a>
+    <div class="item">
+      <h5>Direct Messages</h5>
+      <app-dmchannel-list [currentServer]="currentServer | async"
+        [currentChatChannel]="currentChatChannel | async">
+      </app-dmchannel-list>
+    </div>
+
+
+  </div>
+
+  <div class="item" id="bottom-attached-item"
+    [class.inverted]="settingsService.invertedTheme">
+    <app-status-bar></app-status-bar>
+  </div>
+
+</div>
+<!-- /LEFT MAIN SIDEBAR -->
+
+<!-- MAIN CONTENT SECTION -->
+<div id="main-content" class="ui segment"
+  [class.inverted]="settingsService.invertedTheme">
+
+  <router-outlet></router-outlet>
+</div>
+<!-- /MAIN CONTENT SECTION -->
+
+<!-- RIGHT SIDEBAR -->
+<div id="sidebar-container">
+  <div class="ui visible right vertical sidebar menu"
+    [class.inverted]="settingsService.invertedTheme">
+    <div class="item">
+      <h4>Friends List</h4>
+    </div>
+    <app-channel-user-list [currentServer]="(currentServer | async)"></app-channel-user-list>
+  </div>
+</div>
+<!-- /RIGHT SIDEBAR -->

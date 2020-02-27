@@ -1,0 +1,26 @@
+<div id="home-background">
+  <div class="ui basic padded inverted segment"
+    id="server-list-container">
+    <h1>Your Servers</h1>
+
+    <div class="ui eight doubling cards">
+
+      <a class="ui raised card" *ngFor="let server of serverList"
+        [routerLink]="['channels', server._id]">
+        <div class="image">
+          <img *ngIf="server.image_url" [src]="server.image_url"
+            alt="">
+          <div class="server-content text" *ngIf="!server.image_url">
+            <p>
+              {{ server.name.substring(0,3) | uppercase}}
+            </p>
+          </div>
+        </div>
+        <div class="content">
+          <p class="description">{{server.name}}</p>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</div>

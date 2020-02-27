@@ -1,0 +1,28 @@
+
+# run with `artillery run artillery.yaml`
+config:
+  target: "http://127.0.0.1:7203"
+  phases:
+    - duration: 30
+      arrivalRate: 20
+  variables:
+    greeting: ["hello", "goedemorgen", "добрый день", "guten tag", "bonjour", "hola"]
+  socketio:
+    query:
+      test: d0934i2*@!*%j4fehg0[]sdf,af2
+
+scenarios:
+  - name: "A chatty user"
+    weight: 10
+    engine: "socketio"
+    flow:
+      - loop:
+        - emit:
+            channel: "send-message"
+            data:
+              server_id: "5b28198241b28334b45f636f"
+              channel_id: "5b28198241b28334b45f6386"
+              message: '{{ greeting }}'
+        - think: 1
+          count: 50
+      - think: 240

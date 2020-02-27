@@ -1,0 +1,19 @@
+a.item {
+  &.friends {
+    background: #141e48 !important;
+    border-bottom: 1px solid #474747;
+
+    &:hover, &.active {
+      background: #123697 !important;
+    }
+
+
+    i {
+      margin-bottom: 3px !important;
+    }
+  }
+
+  span {
+    font-size: 0.8em;
+  }
+}

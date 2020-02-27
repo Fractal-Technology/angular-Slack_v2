@@ -1,0 +1,46 @@
+<div id="background-wrapper">
+
+  <div id="centered-segment" class="ui very padded inverted text container segment">
+    <div class="header">
+      <h2>Welcome to ChatApp!</h2>
+      <p>Please log in to continue.</p>
+    </div>
+    <div *ngIf="error" class="ui inverted negative message">
+      <div class="header">Login Failed</div>
+      <p>{{ error }}</p>
+    </div>
+    <form [formGroup]="loginForm" class="ui inverted form"
+      [class.error]="error" (ngSubmit)="submitForm()">
+      <div class="field">
+        <label>Username</label>
+        <input formControlName="username" type="text"
+          name="username" placeholder="Username"
+          autofocus>
+      </div>
+      <div class="field">
+        <label>Password</label>
+        <input autocomplete="off" formControlName="password"
+          type="password" name="password" placeholder="Password">
+        <div style="margin-top: 6px">
+          <a>Forgot your Password?</a>
+        </div>
+      </div>
+      <div class="field">
+        <div class="buttons-container">
+          <button class="ui tiny fluid primary button"
+            type="submit" [class.loading]="submitting">
+            Login
+          </button>
+        </div>
+      </div>
+      <p class="text-muted">
+        Don't have an account?
+        <a [routerLink]="['/register', {redirect: redirectTo}]">
+          Register
+        </a>
+      </p>
+    </form>
+
+  </div>
+
+</div>

@@ -1,0 +1,25 @@
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+.left.vertical.sidebar.menu {
+  overflow: hidden !important;
+
+  &:hover {
+    overflow-y: auto !important;
+  }
+}
+
+a.item {
+  overflow: hidden;
+  &:hover {
+    h5 {
+      text-decoration: underline;
+    }
+  }
+  h5 {
+    float: left;
+    margin: 0;
+  }
+}
+
