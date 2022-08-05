@@ -91,7 +91,7 @@
     "jsonwebtoken": "^8.2.1",
     "linkifyjs": "^2.1.7",
     "mongodb": "^3.0.2",
-    "mongoose": "^5.0.14",
+    "mongoose": "^5.7.5",
     "mongoose-delete": "^0.4.0",
     "ng2-right-click-menu": "file:vendor/ng2-right-click-menu-0.0.16.tgz",
     "ng2-semantic-ui": "^0.9.7",
